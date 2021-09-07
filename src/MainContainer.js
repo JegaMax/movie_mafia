@@ -8,14 +8,14 @@ function MainContainer() {
     useEffect(() => {
 
         getMovieData();
+    // eslint-disable-next-line
+    }, []);
 
-    }, [])
 
 
     function readTitle(value) {
         setTitle(value);
     }
-
     function getMovieData() {
 
         let url = `https://omdbapi.com/?t=${title}&apikey=f4056ad2`;
@@ -36,7 +36,7 @@ function MainContainer() {
             <div className="movie-container">
                 <div className="padd">
                     <p style={{textAlign:"center"}} >Everyone loves movies and they are the good source of entertainment and favorite enjoy time. And, you don’t just watch movies but like to read about movies, know about their characters and more, Movie mafia site provide you everything about movies</p>
-                    <h2>World wide Movie Information for you!</h2>
+                    <h2>World wide Movies and Web series Information for you!</h2>
                     <div className="input-group">
                         <input type="text" placeholder="Enter the movie name" onChange={(event) => { readTitle(event.target.value) }} className="search-field" />
                         <button className="btn" onClick={getMovieData}>Get Info</button>

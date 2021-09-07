@@ -80,7 +80,6 @@ h1,h2,h3{
 .wrapper {
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
 }
 .header {
@@ -113,5 +112,12 @@ h1,h2,h3{
 .movie-container{
   width: 70%;
   margin-left: 24%;
+}
+
+@media (max-width: 600px) {
+  .movie-container{
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
